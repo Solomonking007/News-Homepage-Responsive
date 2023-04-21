@@ -1,0 +1,470 @@
+
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+} 
+
+
+*,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+} 
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    background-color: hsl(36, 100%, 99%);;
+    padding: 30px 100px;
+}
+
+
+img {
+    max-width: 100%;
+    width: 100%;
+} 
+
+
+.icon-menu {
+    width: 50px;
+    display: none;
+
+}
+
+.back-drop {
+    display: none;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;  
+    margin-bottom: 40px;
+}
+
+
+nav  .nav-links {
+    display: flex;  
+    align-items: center;  
+}
+
+nav  .nav-links li {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    list-style: none;
+    margin-left: 40px;
+    cursor: pointer;
+
+}
+
+nav .nav-links li:hover {
+    color: var(--Soft-red);
+
+}
+
+
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;    
+} 
+
+
+.page-container .page-holder {
+    margin-right: 32px;
+    
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+.hero .hero-text {
+    width: 50%;
+    padding-top: 30px;
+    
+} 
+
+.hero .hero-text p{
+    font-size: 18px;
+    margin: 10px;
+    color: var(--Dark-grayish-blue);
+} 
+
+
+.hero button {
+    width: 180px;
+    font-size: 1rem;
+    padding: 12px 24px;
+    letter-spacing: 4px;
+    color: #FFF;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    background: var(--Soft-red);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.hero button:hover {
+    background: var(--Very-dark-blue)
+    
+}
+
+
+
+.page-container aside {
+    background-color: var(--Very-dark-blue);
+    color: #FFF;
+    padding: 18px;
+}
+
+
+aside h2 {
+    color: var(--Soft-orange);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;   
+    
+}  
+
+
+
+aside h3 {
+   font-size: 16px;
+   margin-bottom: 10px;
+    
+} 
+
+aside h3:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+} 
+
+aside p {
+    font-size: 15px;
+    color: gray;
+}  
+
+
+aside .news-flash {
+    padding-bottom: 60px;
+}
+
+
+aside .news-flash .border-line {
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+    padding-bottom: 30px;
+    
+} 
+
+
+
+
+
+.gadget-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+
+.gadget-holder  img {
+    width: 90px;
+    
+} 
+
+.gadget-container .image-wrapper {
+    margin-right: 14px;
+}
+
+.gadget-container .gadget-holder {
+    display: flex;
+} 
+
+.gadget-holder .gadget-content {
+    width: 220px;
+    margin-right: 50px;
+}
+
+.gadget-content .bold3 {
+    color: gray;
+    font-size: 1.5rem;
+    margin-bottom: 7px;
+    font-weight: bold;
+    opacity: 50%;
+} 
+
+.gadget-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    
+} 
+
+.gadget-content h4:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+} 
+
+.gadget-content p {
+    color: gray;
+    font-size: 14px;
+} 
+
+
+
+
+
+
+.attribution { 
+    font-size: 18px; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attribution a { 
+    color: var(--Soft-red); 
+}
+
+
+
+
+/* media querry */
+
+/* ######## Mobile ########## */
+
+
+.image-web-3-mobile {
+    display: none;
+}
+
+
+
+
+
+@media  (max-width:376px) {
+    main {
+        overflow: hidden;
+        padding: 30px;
+    }
+
+
+    /* change desktop hero image to mobile image */
+    .image-web-3-desktop {
+        display: none;
+    }
+
+    .image-web-3-mobile {
+        display: block;
+    }
+    
+    
+
+
+/* nav section */
+
+nav {
+    position: sticky;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav .nav-links {
+    width: 200px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 250px 0 0 20px;
+    z-index: 99;
+    transition: all .5s ease-in-out;
+    
+}  
+
+
+.back-drop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 60%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 98;
+    transition: all .5s ease-in-out;
+
+
+}
+
+.back-drop.active {
+    display: block;
+}
+
+
+nav .nav-links li{
+    font-size: 22px;
+    list-style: none;
+    margin-left: 0px;
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+
+
+
+
+nav .nav-links.active {
+    right: 0;
+}
+
+.hambuger {
+    font-size: 50px;
+    display: inline-block;
+    transition: all .5s ease-in-out;
+
+}
+
+.hambuger.active {
+    display: none;
+    
+}
+
+.close {
+    display: none;
+    z-index: 100;
+    transition: all .5s ease-in-out;
+
+}
+
+.close.active {
+    display: inline-block;
+} 
+
+
+
+
+
+/* top section */
+.page-container {
+    display: block;
+}
+
+.page-container .page-holder {
+    margin-right: 0px;
+}
+
+.hero {
+    display: block;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.hero h1 .unbreak {
+    display: none;
+}
+
+.hero .hero-text {
+    width: 100%;
+    margin: 0px;
+    line-height: 1.4;
+    padding-top: 0px;
+
+}
+
+
+.hero button {
+    margin-bottom: 30px;
+}
+
+
+.page-container aside {
+    color: #FFF;
+    background-color: var(--Very-dark-blue);
+    padding: 24px;
+    line-height: 24px;
+}
+
+aside p {
+    font-size: 15px;
+    color: gray;
+}
+
+
+
+
+
+
+/* bottom section */
+
+.gadget-container {
+    display: block;
+}
+
+.gadget-container .gadget-holder {
+    margin-bottom: 24px;
+}
+
+.gadget-content .bold3 {
+    color: gray;
+    font-size: 1.7rem;
+    margin-bottom: 7px;
+}
+
+.gadget-holder .gadget-content {
+    margin-right: 0px;
+}
+
+.gadget-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.gadget-content p {
+    color: gray;
+    font-size: 15px;
+}
+
+    
+    
+}
